@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multilingual Dictionary App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <h1><i class="fa-solid fa-language"></i>Multilingual Dictionary</h1>
+        <div class="input-group">
+            <input type="text" id="wordinput" placeholder="Enter a word or sentence">
+            <select  id="lanuageSelect">
+                <option value="en"> en English</option>
+                <option value="hi"> IN Hindi</option>
+                <option value="mr"> IN Marathi</option>
+                <option value="es">ES Spanish</option>
+                <option value="fr">Fr French</option>
+                <option value="de">de German</option>
+                <option value="ja">ja Japanese</option>
+                <option value="Ko">Ko Korean</option>
+
+            </select>
+            <button id="microphoneBTN" onclick="toggleSpeechRecognition()">
+                <i class="fa-solid fa-microphone icon"></i>
+                <span class="mic-text">speak now</span>
+            </button>
+        </div>
+    
+            <button onclick="searchWord()"><i class="fa-solid fa-magnifying-glass icon"></i>search</button>
+        
+        <div id="result"> 
+
+        </div>
+    </div>
+    <div id="speechModal" class="speech-modal">
+        <div class="speech-modal-content">
+            <div class="speech-modal-header">
+                <h2>Speak Now</h2>
+                <button id="closeModalBtn" onclick="closeSpeechModal()">&times;</button>
+            </div>
+            <div class="speech-modal-body">
+                <p>Listening....</p>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    
+    <script src="script.js" > </script>
+
+   
+</body>
+</html>
